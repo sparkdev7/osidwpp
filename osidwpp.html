@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSIDWPP - App Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef1f5;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #007acc;
+    }
+    p.description {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    #searchBox {
+      display: block;
+      margin: 0 auto 20px auto;
+      padding: 10px;
+      width: 80%;
+      max-width: 400px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    li {
+      background: #fff;
+      margin: 8px 0;
+      padding: 15px 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+    li:hover {
+      background: #f0f8ff;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #888;
+    }
+    @media (max-width: 600px) {
+      #searchBox {
+        width: 95%;
+      }
+      li {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>OSIDWPP</h1>
+<p class="description">Open Source Installers Distribution Web Page Project</p>
+<input type="text" id="searchBox" placeholder="Search for app...">
+
+<ul id="appList">
+  <li><a href="https://downloads.malwarebytes.com/file/mb-windows">Malwarebytes</a></li>
+  <li><a href="https://download.scdn.co/SpotifySetup.exe">Spotify</a></li>
+  <li><a href="https://cdn.cloudflare.steamstatic.com/client/installer/SteamSetup.exe">Steam</a></li>
+  <li><a href="https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi">Epic Games Launcher</a></li>
+  <li><a href="https://aka.ms/vs/17/release/vs_community.exe">Visual Studio Community</a></li>
+  <li><a href="https://update.code.visualstudio.com/latest/win32-x64-user/stable">Visual Studio Code</a></li>
+  <li><a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US">Mozilla Firefox</a></li>
+  <li><a href="https://dl.google.com/drive/InstallBackupAndSync.exe">Google Drive</a></li>
+  <li><a href="https://github.com/sparkdev7/OSIDWPP/releases/download/v1.0/qbittorrent_5.1.0_x64_setup.exe">qBittorrent</a>
+  <li><a href="https://espejito.fder.edu.uy/videolan/vlc/3.0.21/win64/vlc-3.0.21-win64.exe">VLC Media Player</a></li>
+  <li><a href="https://www.7-zip.org/a/7z2300-x64.exe">7-Zip</a></li>
+  <li><a href="https://github.com/ShareX/ShareX/releases/download/v17.0.0/ShareX-17.0.0-setup.exe">ShareX</a></li>
+  <li><a href="https://github.com/paintdotnet/release/releases/download/v5.1.8/paint.net.5.1.8.install.anycpu.web.zip">Paint.NET</a></li>
+  <li><a href="https://github.com/sparkdev7/OSIDWPP/releases/download/v1.0/KeePass-2.58-Setup.exe">KeePass</a>
+  <li><a href="https://download.virtualbox.org/virtualbox/7.0.10/VirtualBox-7.0.10-158379-Win.exe">VirtualBox</a></li>
+  <li><a href="https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.8.1/npp.8.8.1.Installer.x64.exe">Notepad++</a></li>
+  <li><a href="https://cdn-fastly.obsproject.com/downloads/OBS-Studio-29.0.2-Full-Installer-x64.exe">OBS Studio</a></li>
+  <li><a href="https://www.voidtools.com/Everything-1.4.1.1025.x64-Setup.exe">Everything</a></li>
+  <li><a href="https://download.gimp.org/mirror/pub/gimp/v2.10/windows/gimp-2.10.34-setup.exe">GIMP</a></li>
+  <li><a href="https://github.com/audacity/audacity/releases/download/Audacity-3.7.3/audacity-win-3.7.3-64bit.exe">Audacity</a></li>
+</ul>
+
+<p class="footer">Made by Spark - OSIDWPP 2025</p>
+
+<script>
+  const searchBox = document.getElementById("searchBox");
+  const appList = document.getElementById("appList");
+  const items = appList.getElementsByTagName("li");
+
+  searchBox.addEventListener("input", function () {
+    const filter = searchBox.value.toLowerCase();
+    for (let i = 0; i < items.length; i++) {
+      const text = items[i].innerText.toLowerCase();
+      items[i].style.display = text.includes(filter) ? "" : "none";
+    }
+  });
+</script>
+
+</body>
+</html>
