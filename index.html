@@ -118,7 +118,12 @@
   <li><img src="https://raw.githubusercontent.com/sparkdev7/osidwpp/refs/heads/main/icons/audacity.png" alt="Audacity"><a href="https://github.com/audacity/audacity/releases/download/Audacity-3.7.3/audacity-win-3.7.3-64bit.exe">Audacity</a></li>
 </ul>
 
-<p class="footer">Made by Spark - OSIDWPP 2025</p>
+<footer class="footer">
+  SparkDev - Open Source Installer Distribution Web Page Project (OSIDWPP) 2025<br />
+  Links & Contacts: <a href="https://sparkdev7.github.io/links/" target="_blank" style="color:#007acc; text-decoration:none;">
+    sparkdev7.github.io/links/
+  </a>
+</footer>
 
 <script>
   const searchBox = document.getElementById("searchBox");
@@ -128,8 +133,9 @@
   searchBox.addEventListener("input", function () {
     const filter = searchBox.value.toLowerCase();
     for (let i = 0; i < items.length; i++) {
-      const text = items[i].innerText.toLowerCase();
-      items[i].style.display = text.includes(filter) ? "" : "none";
+      let a = items[i].getElementsByTagName("a")[0];
+      let textValue = a.textContent || a.innerText;
+      items[i].style.display = textValue.toLowerCase().includes(filter) ? "" : "none";
     }
   });
 </script>
